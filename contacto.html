@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | DetallesUnicos</title>
+    <meta name="description" content="Escríbenos para dudas sobre fundas, pedidos mayoristas o colaboraciones.">
+    <link rel="canonical" href="https://detallesunicos.github.io/DetallesUnicos/contacto.html" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://detallesunicos.github.io/DetallesUnicos/contacto.html">
+    <meta property="og:title" content="Contacto | DetallesUnicos">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .contact-container {
+            max-width: 600px;
+            margin: 4rem auto;
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 500; margin-bottom: 0.5rem; }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .error-message { color: red; font-size: 0.85rem; margin-top: 5px; display: none; }
+        
+        #formStatus {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none;
+        }
+        .status-success { background: #e6f4ea; color: #1e8e3e; }
+        .status-error { background: #fce8e6; color: #d93025; }
+    </style>
+</head>
+<body>
+
+    <header role="banner">
+<!-- components/header.html -->
+<div class="container nav-wrapper">
+    <a href="index.html" class="brand brand-logo" aria-label="Volver al inicio">Detalles Únicos</a>
+    
+    <!-- Desktop Menu -->
+    <nav class="desktopElement" aria-label="Navegación principal">
+        <ul class="nav-links">
+            <li><a href="index.html#fundas">FUNDAS PERSONALIZADAS</a></li>
+            <li><a href="index.html#cadenas">CADENAS CON FOTO</a></li>
+            <li><a href="index.html#pulseras">PULSERAS GRABADAS</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-btn mobileElement" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMobileMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileOverlay" class="mobile-overlay">
+    <button class="close-menu-btn" onclick="toggleMobileMenu()" aria-label="Cerrar menú">×</button>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html#fundas" onclick="toggleMobileMenu()">FUNDAS PERSONALIZADAS</a></li>
+        <li><a href="index.html#cadenas" onclick="toggleMobileMenu()">CADENAS CON FOTO</a></li>
+        <li><a href="index.html#pulseras" onclick="toggleMobileMenu()">PULSERAS GRABADAS</a></li>
+        <li><a href="index.html#faq" onclick="toggleMobileMenu()">FAQ</a></li>
+        <li><a href="contacto.html" onclick="toggleMobileMenu()">CONTACTO</a></li>
+    </ul>
+</div>
+
+</header>
+
+    <main id="main-content" role="main" style="margin-top: calc(var(--header-height) + 2rem);">
+        <div class="container fade-up">
+            <h1 class="text-center">Contáctanos</h1>
+            <p class="text-center" style="margin-bottom: 2rem;">¿Tenés dudas sobre tu pedido? Escribinos y te respondemos a la brevedad.</p>
+            
+            <div class="contact-container">
+                <!-- Change action to your Formspree endpoint -->
+                <form id="contactForm" action="https://formspree.io/f/xbjnqzzq" method="POST" novalidate aria-label="Formulario de contacto">
+                    
+                    <div class="form-group">
+                        <label for="name">Nombre Completo *</label>
+                        <input type="text" id="name" name="name" class="form-control" required aria-required="true" placeholder="Juan Pérez">
+                        <div class="error-message" id="nameError">El nombre es obligatorio.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" class="form-control" required aria-required="true" placeholder="juan@ejemplo.com">
+                        <div class="error-message" id="emailError">Ingresa un correo electrónico válido.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <select id="subject" name="subject" class="form-control" aria-label="Seleccionar asunto de contacto">
+                            <option value="Duda sobre pedido">Duda sobre mi pedido</option>
+                            <option value="Ventas Mayoristas">Ventas Mayoristas</option>
+                            <option value="Soporte Técnico">Problema con la web</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje *</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required aria-required="true" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        <div class="error-message" id="messageError">El mensaje no puede estar vacío.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                    
+                    <div id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+<!-- components/footer.html -->
+<div class="container">
+    <div class="footer-grid">
+        <div class="footer-brand-col">
+            <div class="brand" style="font-size: 2rem;">DetallesUnicos</div>
+            <p style="color: rgba(255,255,255,0.7); margin-top: 1rem;">Creando accesorios únicos para proteger lo que te conecta con el mundo.</p>
+        </div>
+        
+        <div class="footer-links-col">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="personalizar.html">Personalizar</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social-col">
+            <h4>Seguinos</h4>
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Ir a nuestro Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="mailto:hola@detallesunicos.com" aria-label="Envíarnos un email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="copyright">
+        &copy; <span id="currentYear"></span> DetallesUnicos. Todos los derechos reservados.
+    </div>
+</div>
+
+</footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Basic Client-Side Validation
+            let isValid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+            
+            // Name validation
+            if(!name.value.trim()) {
+                document.getElementById('nameError').style.display = 'block';
+                name.setAttribute('aria-invalid', 'true');
+                isValid = false;
+            } else {
+                document.getElementById('nameError').style.display = 'none';
+                name.removeAttribute('aria-invalid');
+            }
+
+            // Email validation (simple regex)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailRegex.test(email.value)) {
+                document.getElementById('emailError').style.display = 'block';
+                email.setAttribute('aria-invalid', 'true');
+                isValid = false;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+                email.removeAttribute('aria-invalid');
+            }
+
+            // Message validation
+            if(!message.value.trim()) {
+                document.getElementById('messageError').style.display = 'block';
+                message.setAttribute('aria-invalid', 'true');
+                isValid = false;
+            } else {
+                document.getElementById('messageError').style.display = 'none';
+                message.removeAttribute('aria-invalid');
+            }
+
+            if(isValid) {
+                const statusDiv = document.getElementById('formStatus');
+                const btn = this.querySelector('button[type="submit"]');
+                const originalText = btn.textContent;
+                
+                btn.textContent = 'Enviando...';
+                btn.disabled = true;
+
+                try {
+                    const response = await fetch(this.action, {
+                        method: this.method,
+                        body: new FormData(this),
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        statusDiv.textContent = '¡Gracias! Tu mensaje fue enviado con éxito.';
+                        statusDiv.className = 'status-success';
+                        statusDiv.style.display = 'block';
+                        this.reset();
+                    } else {
+                        throw new Error('Error network response');
+                    }
+                } catch (error) {
+                    statusDiv.textContent = 'Hubo un problema al enviar el formulario. Intenta nuevamente.';
+                    statusDiv.className = 'status-error';
+                    statusDiv.style.display = 'block';
+                } finally {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                    
+                    setTimeout(() => { statusDiv.style.display = 'none'; }, 5000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

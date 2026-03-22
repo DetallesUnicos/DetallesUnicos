@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Cases | Fundas con onda y protección</title>
+    <title>DetallesUnicos | Fundas con onda y protección</title>
     <meta name="description"
-        content="Fundas para iPhone, Samsung y accesorios premium. Personaliza tu celular con Aura Cases.">
+        content="Fundas para iPhone, Samsung y accesorios premium. Personaliza tu celular con DetallesUnicos.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
@@ -29,23 +30,16 @@
     <header role="banner" style="position: sticky; top:0;">
         <!-- components/header.html -->
         <div class="container nav-wrapper">
-            <a href="index.html" class="brand" aria-label="Volver al inicio">Aura Cases</a>
+            <a href="index.html" class="brand brand-logo" aria-label="Volver al inicio">Detalles Únicos</a>
 
             <!-- Desktop Menu -->
             <nav class="desktopElement" aria-label="Navegación principal">
                 <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html#productos">Catálogo</a></li>
-                    <li>
-                        <a href="personalizar.html">Diseñá tu Case</a>
-                        <!-- Submenu Example -->
-                        <ul class="submenu">
-                            <li><a href="personalizar.html?brand=apple">Apple iPhone</a></li>
-                            <li><a href="personalizar.html?brand=samsung">Samsung Galaxy</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="index.html#fundas">FUNDAS PERSONALIZADAS</a></li>
+                    <li><a href="index.html#cadenas">CADENAS CON FOTO</a></li>
+                    <li><a href="index.html#pulseras">PULSERAS GRABADAS</a></li>
                     <li><a href="index.html#faq">FAQ</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
 
@@ -64,10 +58,11 @@
         <div id="mobileOverlay" class="mobile-overlay">
             <button class="close-menu-btn" onclick="toggleMobileMenu()" aria-label="Cerrar menú">×</button>
             <ul class="mobile-nav-links">
-                <li><a href="index.html" onclick="toggleMobileMenu()">Inicio</a></li>
-                <li><a href="index.html#productos" onclick="toggleMobileMenu()">Catálogo</a></li>
-                <li><a href="personalizar.html" onclick="toggleMobileMenu()">Diseñá tu Case</a></li>
-                <li><a href="contacto.html" onclick="toggleMobileMenu()">Contacto</a></li>
+                <li><a href="index.html#fundas" onclick="toggleMobileMenu()">FUNDAS PERSONALIZADAS</a></li>
+                <li><a href="index.html#cadenas" onclick="toggleMobileMenu()">CADENAS CON FOTO</a></li>
+                <li><a href="index.html#pulseras" onclick="toggleMobileMenu()">PULSERAS GRABADAS</a></li>
+                <li><a href="index.html#faq" onclick="toggleMobileMenu()">FAQ</a></li>
+                <li><a href="contacto.html" onclick="toggleMobileMenu()">CONTACTO</a></li>
             </ul>
         </div>
 
@@ -75,32 +70,33 @@
 
     <main id="main-content" role="main" style="margin-top:0;">
 
-        <section class="hero-modern">
-            <div class="container hero-grid">
-                <div class="hero-text fade-up">
-                    <h1>Fundas con mucha onda.<br>(Y protección).</h1>
-                    <p>Protegé tu celular con estilo. Diseños premium, agarre perfecto y resistencia contra caídas
-                        extremas.</p>
-                    <div class="hero-buttons">
-                        <a href="personalizar.html?brand=apple" class="btn btn-pill btn-black">Shop iPhone</a>
-                        <a href="personalizar.html?brand=samsung" class="btn btn-pill btn-white">Shop Samsung</a>
-                    </div>
-                </div>
-                <div class="hero-image fade-up">
-                    <img src="https://images.unsplash.com/photo-1601593346740-925612772716?q=80&w=600&auto=format&fit=crop"
-                        alt="Funda Aesthetic" class="floating-case">
+        <section class="hero-boutique fade-up">
+            <div class="container hero-content text-center">
+                <h1>Crea tu Regalo Único.</h1>
+                <p>Fundas, Cadenas y Pulseras totalmente Personalizadas con tus fotos y recuerdos.</p>
+                <div class="hero-buttons" style="justify-content: center;">
+                    <a href="#productos" class="btn btn-pill btn-primary cta-hero">CREAR MI DETALLE ÚNICO</a>
                 </div>
             </div>
         </section>
 
-        <section class="shop-by-device container fade-up">
-            <div class="device-card apple-card">
-                <h2>Apple iPhone</h2>
-                <a href="personalizar.html?brand=apple" class="btn btn-pill btn-black">Ver Modelos</a>
-            </div>
-            <div class="device-card samsung-card">
-                <h2>Samsung Galaxy</h2>
-                <a href="personalizar.html?brand=samsung" class="btn btn-pill btn-black">Ver Modelos</a>
+        <section class="featured-categories container fade-up" style="margin-top: 2rem;">
+            <div class="categories-grid-3x">
+                <div class="category-card" id="fundas">
+                    <img src="fundas.jpeg" alt="Funda Polaroid con fotos">
+                    <h3>FUNDAS</h3>
+                    <a href="personalizar.html" class="btn btn-black btn-cate">Personalizar mi Funda</a>
+                </div>
+                <div class="category-card" id="cadenas">
+                    <img src="cadenas.jpeg" alt="Cadena con proyección y foto">
+                    <h3>CADENAS</h3>
+                    <a href="#" class="btn btn-black btn-cate">Crear mi Cadena con Foto</a>
+                </div>
+                <div class="category-card" id="pulseras">
+                    <img src="pulseras.jpeg" alt="Pulsera de cadena plateada con grabado de ojos">
+                    <h3>PULSERAS</h3>
+                    <a href="#" class="btn btn-black btn-cate">Diseñar mi Pulsera con Grabado</a>
+                </div>
             </div>
         </section>
 
@@ -113,10 +109,10 @@
                 <div class="slider-product-card">
                     <div class="card-inner">
                         <span class="badge new-badge">NUEVO</span>
-                        <img src="https://images.unsplash.com/photo-1601593346740-925612772716?q=80&w=400&auto=format&fit=crop"
-                            alt="Case Transparente Magsafe" class="slider-img" loading="lazy">
-                        <h3>Case Clear MagSafe</h3>
-                        <p class="price">$15.000</p>
+                        <img src="fundas.jpeg"
+                            alt="Funda Polaroid Personalizada" class="slider-img" loading="lazy">
+                        <h3>Funda Polaroid</h3>
+                        <p class="price">$U 890</p>
                         <a href="#" class="btn btn-cart">Añadir</a>
                     </div>
                 </div>
@@ -124,30 +120,31 @@
                 <div class="slider-product-card">
                     <div class="card-inner">
                         <span class="badge hot-badge">🔥 HOT</span>
-                        <img src="https://images.unsplash.com/photo-1603313011101-320f26a4f6f6?q=80&w=400&auto=format&fit=crop"
-                            alt="Combo Premium" class="slider-img" loading="lazy">
-                        <h3>Combo Aesthetic</h3>
-                        <p class="price">$19.500</p>
+                        <img src="cadenas.jpeg"
+                            alt="Collar Proyección Foto" class="slider-img" loading="lazy">
+                        <h3>Collar Proyección</h3>
+                        <p class="price">$U 1.250</p>
                         <a href="#" class="btn btn-cart">Añadir</a>
                     </div>
                 </div>
 
                 <div class="slider-product-card">
                     <div class="card-inner">
-                        <img src="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?q=80&w=400&auto=format&fit=crop"
-                            alt="Funda Rosa Silicona" class="slider-img" loading="lazy">
-                        <h3>Funda Silicona Soft</h3>
-                        <p class="price">$12.000</p>
+                        <img src="pulseras.jpeg"
+                            alt="Pulsera Grabado de Ojos" class="slider-img" loading="lazy">
+                        <h3>Pulsera Grabado Ojos</h3>
+                        <p class="price">$U 1.100</p>
                         <a href="#" class="btn btn-cart">Añadir</a>
                     </div>
                 </div>
 
                 <div class="slider-product-card">
                     <div class="card-inner">
-                        <img src="https://images.unsplash.com/photo-1615526675159-e248cba0e7cb?q=80&w=400&auto=format&fit=crop"
-                            alt="Accesorios AirPods" class="slider-img" loading="lazy">
-                        <h3>Fundas AirPods</h3>
-                        <p class="price">$8.500</p>
+                        <span class="badge hot-badge">🎁 COMBO</span>
+                        <img src="cadenas1.jpeg"
+                            alt="Combo Especial" class="slider-img" loading="lazy">
+                        <h3>Combo Especial</h3>
+                        <p class="price">$U 1.850</p>
                         <a href="#" class="btn btn-cart">Añadir</a>
                     </div>
                 </div>
@@ -183,6 +180,39 @@
             </div>
         </section>
 
+        <section id="faq" class="container fade-up" style="margin-bottom: 4rem;">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Hacen envíos a todo Uruguay?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, enviamos por DAC o cadetería propia.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cuánto tarda el pedido?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Entre 48 y 72 horas hábiles.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cómo envío mi foto?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Una vez realizada la compra, nos contactamos por WhatsApp para recibir tu imagen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer role="contentinfo">
@@ -190,7 +220,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand-col">
-                    <div class="brand" style="font-size: 2rem;">Aura Cases</div>
+                    <div class="brand" style="font-size: 2rem;">DetallesUnicos</div>
                     <p style="color: rgba(255,255,255,0.7); margin-top: 1rem;">Creando accesorios únicos para proteger
                         lo que te conecta con el mundo.</p>
                 </div>
@@ -216,7 +246,7 @@
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
-                        <a href="mailto:hola@auracases.com" aria-label="Envíarnos un email">
+                        <a href="mailto:hola@detallesunicos.com" aria-label="Envíarnos un email">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
@@ -229,7 +259,7 @@
             </div>
 
             <div class="copyright">
-                &copy; <span id="currentYear"></span> Aura Cases. Todos los derechos reservados.
+                &copy; <span id="currentYear"></span> DetallesUnicos. Todos los derechos reservados.
             </div>
         </div>
 
