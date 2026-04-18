@@ -1,281 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DetallesUnicos | Fundas con onda y protección</title>
-    <meta name="description"
-        content="Fundas para iPhone, Samsung y accesorios premium. Personaliza tu celular con DetallesUnicos.">
-
+    <title>Detalles Únicos | Dark Navy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
-
 <body>
+    <div class="ambient-glow"></div>
 
-    <div class="marquee-bar">
-        <span>✨ ENVÍO GRATIS DESDE $30.000 ✨ FUNDAS ANTIGOLPES PREMIUM ✨ CALIDAD GARANTIZADA ✨ DISEÑOS ÚNICOS ✨
-            PROTECCIÓN 360º ✨</span>
-    </div>
-
-    <header role="banner" style="position: sticky; top:0;">
-        <!-- components/header.html -->
-        <div class="container nav-wrapper">
-            <a href="index.html" class="brand brand-logo" aria-label="Volver al inicio">Detalles Únicos</a>
-
-            <!-- Desktop Menu -->
-            <nav class="desktopElement" aria-label="Navegación principal">
-                <ul class="nav-links">
-                    <li><a href="#fundas">FUNDAS</a></li>
-                    <li><a href="#cadenas">CADENAS</a></li>
-                    <li><a href="#pulseras">PULSERAS</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
-                </ul>
-            </nav>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-btn mobileElement" aria-label="Abrir menú" aria-expanded="false"
-                onclick="toggleMobileMenu()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
+    <nav class="premium-nav">
+        <a href="#" class="nav-logo">D.U.</a>
+        <div class="nav-links">
+            <a href="#fundas">Fundas</a>
+            <a href="#cadenas">Cadenas</a>
+            <a href="#pulseras">Pulseras</a>
         </div>
+    </nav>
 
-        <!-- Mobile Menu Overlay -->
-        <div id="mobileOverlay" class="mobile-overlay">
-            <button class="close-menu-btn" onclick="toggleMobileMenu()" aria-label="Cerrar menú">×</button>
-            <ul class="mobile-nav-links">
-                <li><a href="#fundas" onclick="toggleMobileMenu()">FUNDAS</a></li>
-                <li><a href="#cadenas" onclick="toggleMobileMenu()">CADENAS</a></li>
-                <li><a href="#pulseras" onclick="toggleMobileMenu()">PULSERAS</a></li>
-                <li><a href="#faq" onclick="toggleMobileMenu()">FAQ</a></li>
-                <li><a href="contacto.html" onclick="toggleMobileMenu()">CONTACTO</a></li>
-            </ul>
-        </div>
-
+    <header class="hero-section">
+        <h1 class="hero-title">DETALLES<br>ÚNICOS</h1>
+        <p class="hero-subtitle">Diseño premium para accesorios inolvidables. Exclusividad en cada pieza.</p>
+        <a href="#catalogo" class="btn-glow">DESCUBRIR LA COLECCIÓN</a>
     </header>
 
-    <main id="main-content" role="main" style="margin-top:0;">
-
-        <section class="hero-boutique fade-up">
-            <div class="container hero-content text-center">
-                <h1>Encuentra tu Detalle Único.</h1>
-                <p>Descubre el catálogo de fundas de lujo, cadenas y pulseras. Pídelo directo por WhatsApp.</p>
-                <div class="hero-buttons" style="justify-content: center;">
-                    <a href="#fundas" class="btn btn-pill btn-primary cta-hero">VER CATÁLOGO</a>
-                </div>
+    <main id="catalogo" class="catalog-section">
+        <div class="glass-card" id="fundas">
+            <div class="card-image-wrapper">
+                <img src="fundas.jpeg" alt="Fundas de Lujo">
+                <div class="image-overlay"></div>
             </div>
-        </section>
-
-        <section class="featured-categories container fade-up" style="margin-top: 2rem;">
-            <div class="categories-grid-3x">
-                <div class="category-card" id="fundas">
-                    <img src="fundas.jpeg" alt="Funda Polaroid con fotos">
-                    <h3>FUNDAS</h3>
-                    <a href="https://wa.me/59899000000?text=Hola,%20me%20gustar%C3%ADa%20comprar%20una%20funda" class="btn btn-black btn-cate" target="_blank">Pedir por WhatsApp</a>
-                </div>
-                <div class="category-card" id="cadenas">
-                    <img src="cadenas.jpeg" alt="Cadena con proyección y foto">
-                    <h3>CADENAS</h3>
-                    <a href="https://wa.me/59899000000?text=Hola,%20me%20gustar%C3%ADa%20comprar%20una%20cadena" class="btn btn-black btn-cate" target="_blank">Pedir por WhatsApp</a>
-                </div>
-                <div class="category-card" id="pulseras">
-                    <img src="pulseras.jpeg" alt="Pulsera de cadena plateada con grabado de ojos">
-                    <h3>PULSERAS</h3>
-                    <a href="https://wa.me/59899000000?text=Hola,%20me%20gustar%C3%ADa%20comprar%20una%20pulsera" class="btn btn-black btn-cate" target="_blank">Pedir por WhatsApp</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="productos" class="container fade-up" style="margin-top: 4rem;">
-            <h2 class="section-title"
-                style="text-align:center; font-size:2.8rem; margin-bottom: 2rem; font-weight:800; letter-spacing:-0.03em;">
-                Los Más Vendidos</h2>
-
-            <div class="product-slider">
-                <div class="slider-product-card">
-                    <div class="card-inner">
-                        <span class="badge new-badge">NUEVO</span>
-                        <img src="fundas.jpeg"
-                            alt="Funda Polaroid Personalizada" class="slider-img" loading="lazy">
-                        <h3>Funda Polaroid</h3>
-                        <p class="price">$U 890</p>
-                        <a href="https://wa.me/59899000000?text=Hola,%20quisiera%20consultar%20por%20un%20producto" class="btn btn-cart" target="_blank">Consultar</a>
-                    </div>
-                </div>
-
-                <div class="slider-product-card">
-                    <div class="card-inner">
-                        <span class="badge hot-badge">🔥 HOT</span>
-                        <img src="cadenas.jpeg"
-                            alt="Collar Proyección Foto" class="slider-img" loading="lazy">
-                        <h3>Collar Proyección</h3>
-                        <p class="price">$U 1.250</p>
-                        <a href="https://wa.me/59899000000?text=Hola,%20quisiera%20consultar%20por%20un%20producto" class="btn btn-cart" target="_blank">Consultar</a>
-                    </div>
-                </div>
-
-                <div class="slider-product-card">
-                    <div class="card-inner">
-                        <img src="pulseras.jpeg"
-                            alt="Pulsera Grabado de Ojos" class="slider-img" loading="lazy">
-                        <h3>Pulsera Grabado Ojos</h3>
-                        <p class="price">$U 1.100</p>
-                        <a href="https://wa.me/59899000000?text=Hola,%20quisiera%20consultar%20por%20un%20producto" class="btn btn-cart" target="_blank">Consultar</a>
-                    </div>
-                </div>
-
-                <div class="slider-product-card">
-                    <div class="card-inner">
-                        <span class="badge hot-badge">🎁 COMBO</span>
-                        <img src="cadenas1.jpeg"
-                            alt="Combo Especial" class="slider-img" loading="lazy">
-                        <h3>Combo Especial</h3>
-                        <p class="price">$U 1.850</p>
-                        <a href="https://wa.me/59899000000?text=Hola,%20quisiera%20consultar%20por%20un%20producto" class="btn btn-cart" target="_blank">Consultar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center" style="margin-top: 3rem;">
-                <a href="https://wa.me/59899000000" class="btn btn-pill btn-black" target="_blank"
-                    style="font-size: 1.2rem; padding: 1.2rem 3rem;">Hablar con Ventas</a>
-            </div>
-        </section>
-
-        <section class="features-banner container fade-up">
-            <div class="feature-item">
-                <span class="feature-emoji">🚚</span>
-                <div>
-                    <h4>Envío Rápido</h4>
-                    <p>A todo el país en 2-4 días</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <span class="feature-emoji">🛡️</span>
-                <div>
-                    <h4>Útiles de Verdad</h4>
-                    <p>Bordes súper protectores</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <span class="feature-emoji">🤪</span>
-                <div>
-                    <h4>Cero Aburrimiento</h4>
-                    <p>Fundas con mucha personalidad</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="container fade-up" style="margin-bottom: 4rem;">
-            <h2 class="section-title">Preguntas Frecuentes</h2>
-            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Hacen envíos a todo Uruguay?
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sí, enviamos por DAC o cadetería propia.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Cuánto tarda el pedido?
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Entre 48 y 72 horas hábiles.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Cómo envío mi foto?
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Una vez realizada la compra, nos contactamos por WhatsApp para recibir tu imagen.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer role="contentinfo">
-        <!-- components/footer.html -->
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand-col">
-                    <div class="brand" style="font-size: 2rem;">DetallesUnicos</div>
-                    <p style="color: rgba(255,255,255,0.7); margin-top: 1rem;">Creando accesorios únicos para proteger
-                        lo que te conecta con el mundo.</p>
-                </div>
-
-                <div class="footer-links-col">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="personalizar.html">Personalizar</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-social-col">
-                    <h4>Seguinos</h4>
-                    <div class="social-links">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                            aria-label="Ir a nuestro Instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="mailto:hola@detallesunicos.com" aria-label="Envíarnos un email">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="copyright">
-                &copy; <span id="currentYear"></span> DetallesUnicos. Todos los derechos reservados.
+            <div class="card-content">
+                <h2>Carcasas Premium</h2>
+                <p>Protección y estilo absoluto para tu dispositivo con nuestras fundas polaroid.</p>
+                <a href="https://wa.me/59899000000?text=Hola,%20me%20gustaría%20comprar%20una%20funda" target="_blank" class="btn-outline">Solicitar por WhatsApp</a>
             </div>
         </div>
 
+        <div class="glass-card reverse" id="cadenas">
+            <div class="card-image-wrapper">
+                <img src="cadenas.jpeg" alt="Cadenas de Lujo">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="card-content">
+                <h2>Cadenas con Proyección</h2>
+                <p>Lleva tus recuerdos más preciados en una joya única y elegante.</p>
+                <a href="https://wa.me/59899000000?text=Hola,%20me%20gustaría%20comprar%20una%20cadena" target="_blank" class="btn-outline">Solicitar por WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="glass-card" id="pulseras">
+            <div class="card-image-wrapper">
+                <img src="pulseras.jpeg" alt="Pulseras Grabadas">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="card-content">
+                <h2>Pulseras Personalizadas</h2>
+                <p>Acero inoxidable de la máxima calidad con el grabado que te identifica.</p>
+                <a href="https://wa.me/59899000000?text=Hola,%20me%20gustaría%20comprar%20una%20pulsera" target="_blank" class="btn-outline">Solicitar por WhatsApp</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="minimal-footer">
+        <p>© 2026 Detalles Únicos. Todos los derechos reservados.</p>
+        <a href="https://wa.me/59899000000" target="_blank">Escribir a Soporte WhatsApp</a>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.product-slider').slick({
-                infinite: true, slidesToShow: 3, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000, arrows: true, dots: true,
-                responsive: [{ breakpoint: 1024, settings: { slidesToShow: 2 } }, { breakpoint: 600, settings: { slidesToShow: 1, arrows: false } }]
-            });
-        });
-    </script>
 </body>
-
 </html>
