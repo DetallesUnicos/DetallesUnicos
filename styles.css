@@ -161,49 +161,20 @@ body {
 }
 
 .glass-card {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
-    padding: 3rem;
+    padding: 2.5rem;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.glass-card.reverse {
-    flex-direction: row-reverse;
-}
-
-.card-image-wrapper {
-    flex: 1;
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    height: 100%;
-}
-
-.card-image-wrapper img {
-    width: 100%;
-    aspect-ratio: 4/5;
-    object-fit: cover;
-    filter: brightness(0.85);
-}
-
-.image-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(2,6,23,0.8), transparent);
-}
-
 .card-content {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Vital para que el scroll horizontal no desborde la tarjeta */
+    overflow: hidden;
 }
 
 .card-content h2 {
@@ -343,21 +314,10 @@ body {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .glass-card, .glass-card.reverse {
-        flex-direction: column;
+    .glass-card {
         padding: 1.5rem;
-        gap: 1.5rem;
-        text-align: left;
     }
     
-    .card-image-wrapper {
-        width: 100%;
-    }
-    
-    .card-image-wrapper img {
-        aspect-ratio: 16/10; /* Optimo para header en movil */
-    }
-
     .nav-links {
         display: none; 
     }
